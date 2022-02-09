@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import './directory-browser.css';
+import SignalCellular4BarIcon from '@mui/icons-material/SignalCellular4Bar';
 
 import { FileNode } from '../DataStructure/Data';
 
@@ -12,9 +13,16 @@ export const DirectoryBrowser: React.FC<FileNode> = ({ id, children }: FileNode)
   return (
     <div>
       <span onClick={handleClick}>
-        <h4 style={{ fontWeight: showChildren ? 'bold' : 'normal' }}>{id}</h4>
+      <h4 className= {showChildren? "file-node__title is-active" : "file-node__title"}>
+          <SignalCellular4BarIcon sx={{
+            fontSize: '0.4rem',
+            marginRight: '5px',
+                }}
+          />
+  {id}
+      </h4>
       </span>
-      <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', left: 25, borderLeft: '1px solid', paddingLeft: 15 }}>
+      <div className='file-node'>
         {showChildren && (children ?? []).map((node: FileNode) => <DirectoryBrowser {...node}/>)}
       </div>
     </div>
