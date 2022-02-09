@@ -1,6 +1,8 @@
 .file-node {
+    color: rgb(55, 53, 53);
     cursor: pointer;
     display: flex;
+    font-weight: 400;
     flex-direction: column; 
     left: 25px;
     padding-left: 15px;
@@ -8,8 +10,7 @@
 }
 
 .file-node__title {
-    cursor: pointer;
-    font-weight: 400;
+    display: inline-block;
 }
 
 .is-active {

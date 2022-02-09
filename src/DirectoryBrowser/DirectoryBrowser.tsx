@@ -13,7 +13,7 @@ export const DirectoryBrowser: React.FC<FileNode> = ({ id, children }: FileNode)
   return (
     <div>
       <span onClick={handleClick}>
-      <h4 className= {showChildren? "file-node__title is-active" : "file-node__title"}>
+      <h4 className= {showChildren? "file-node file-node__title is-active" : "file-node file-node__title"}>
           <SignalCellular4BarIcon sx={{
             fontSize: '0.4rem',
             marginRight: '5px',
